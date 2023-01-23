@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { MatTableModule } from '@angular/material/table';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';

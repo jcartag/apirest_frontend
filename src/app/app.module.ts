@@ -12,7 +12,7 @@ import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { UsuarioRoutingModule } from './usuario/component/usuario-router.module';
-//import { UsuarioRoutingModule } from './usuario/usuario-routing.module';
+
 
 
 
