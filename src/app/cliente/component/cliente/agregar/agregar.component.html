@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Agregar Clientes</h1>
+<form [formGroup]="clienteForm" (ngSubmit)="guardar(clienteForm.value)">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+        <button type="submit" mat-raised-button color="primary">Guardar</button>
+    </div>
+</form>

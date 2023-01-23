@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -68,7 +69,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "apirestVideo:build:production"
+              "browserTarget": "apirestVideo:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "browserTarget": "apirestVideo:build:development"
@@ -94,6 +96,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []

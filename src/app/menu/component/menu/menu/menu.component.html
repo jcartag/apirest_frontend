@@ -1,0 +1,41 @@
+<div class="toolbar-container">
+    <mat-toolbar class="header-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon class="icon">menu</mat-icon></button>
+        <div class="navbar-spacer"></div>
+        <div>
+            <h5 id="username"></h5>
+            <h6 id="rol"></h6>
+        </div>
+        
+    </mat-toolbar>
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]='mobileQuery.matches ? 56 : 0'>
+        <mat-sidenav #snav [mode]='mobileQuery.matches ? "over" : "side"' [fixedInViewport]='mobileQuery.matches' fixedTopGap="56" class="sidenav">
+            <mat-nav-list class="nav-list">
+                <div>
+                    <img src="./../../../../assets/logo-Softcaribeean.png" style="width: 100px; height: 100px; padding: 5px;" alt="" class="menu-logo">
+                </div>               
+                <div class="items__container">
+                    <a (click)="snav.toggle()" class="menu-item" mat-list-item routerLink="/cliente" routerLinkActive='active' id="link-us-menu">
+                        <mat-icon>manage_accounts</mat-icon>&nbsp;Cliente
+                    </a>
+                </div>
+                <div class="items__container">
+                    <a (click)="snav.toggle()" class="menu-item" mat-list-item routerLink="cliente/anexar" routerLinkActive='active' id="link-us-menu">
+                        <mat-icon>manage_accounts</mat-icon>&nbsp;Agregar Cliente
+                    </a>
+                </div>
+                <div class="items__container">
+                    <a (click)="snav.toggle()" class="menu-item" mat-list-item routerLink="/usuario" routerLinkActive='active' id="link-us-menu">
+                        <mat-icon>manage_accounts</mat-icon>&nbsp;Agregar Usuario
+                    </a>
+                </div>                
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="content">
+            <br><br><br>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+ 

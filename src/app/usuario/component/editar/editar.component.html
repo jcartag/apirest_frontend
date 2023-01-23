@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Editar usuario</h1>
+<form [formGroup]="usuarioForm" (ngSubmit)="edit()">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Nombre usuario</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Apellido usuario</mat-label>
+            <input matInput formControlName="apellido">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Edad usuario</mat-label>
+            <input matInput formControlName="edad">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Sexo usuarios</mat-label>
+            <input matInput formControlName="sexo">
+        </mat-form-field>       
+        <!--mat-form-field>
+            <mat-label>Sexo usuarios</mat-label>              
+               <mat-select formControlName="sexo">
+                   <mat-option *ngFor="let item of estado">{{ 'Femenino' }}</mat-option>
+               </mat-select>               
+        </mat-form-field-->
+        <mat-form-field>
+            <mat-label>Telefono usuario</mat-label>
+            <input matInput formControlName="telefono">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Estado civil</mat-label>
+            <input matInput formControlName="estado">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+        <button type="submit" mat-raised-button color="primary">Editar</button>
+    </div>
+</form>
+
