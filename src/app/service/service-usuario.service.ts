@@ -15,13 +15,12 @@ export class ServiceUsuarioService {
        return this.http.get<usuarioEntity>(`${environment.url_api_usuario}/usuario`);
     } 
 
-    create(usuario: usuarioEntity):Observable<usuarioEntity>{
+    create(usuario: usuarioEntity):Observable<any>{
       console.log("service",usuario)
       return this.http.post(`${environment.url_api_usuario}/guardar`,usuario)
     }
 
-    update(id: usuarioEntity){    
-      console.log("usuario1",id.id_usuario)
+    update(id: usuarioEntity){   
       return this.http.put<usuarioEntity>(`${environment.url_api_usuario}/usuario/${id.id_usuario}`,id)
     } 
   

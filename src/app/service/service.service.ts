@@ -11,11 +11,6 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-
-  // getById(id: number){
-  //   return this.http.get(`${environment.url_api}/tradatamaestra/${id}`);
-  // }
-
   getAll(): Observable<clienteEntity>{
     return this.http.get<clienteEntity>(`${environment.url_api}/clientes`);
   }  
@@ -24,7 +19,7 @@ export class ServiceService {
     return this.http.post(`${environment.url_api}/guardar`,cliente)
   }
  
-  update(id: clienteEntity){    
+  update(id: clienteEntity){     
     return this.http.put<clienteEntity>(`${environment.url_api}/cliente/${id.id}`,id)
   } 
 

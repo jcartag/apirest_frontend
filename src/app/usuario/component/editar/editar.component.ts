@@ -18,23 +18,23 @@ export class EditarComponent implements OnInit {
 
   ngOnInit(): void {
     this.usuarioForm = this.formBuilder.group({    
-      id: [''], 
-      nombre: ['', Validators.required],
-      apellido: ['', Validators.required],
-      edad: ['', Validators.required],
-      sexo: ['', Validators.required],
-      telefono: ['', Validators.required],
-      estado: ['', Validators.required],
+      id_usuario: [''], 
+      nombre_usuario: ['', Validators.required],
+      apellido_usuario: ['', Validators.required],
+      edad_usuario: ['', Validators.required],
+      sexo_usuario: ['', Validators.required],
+      telefono_usuario: ['', Validators.required],
+      estado_civil: ['', Validators.required],
       }); 
       if(this.data.empcode){      
         console.log("editar",this.data.empcode) 
-        this.usuarioForm.controls['id'].setValue(this.data.empcode.id_usuario);
-        this.usuarioForm.controls['nombre'].setValue(this.data.empcode.nombre_usuario);
-        this.usuarioForm.controls['apellido'].setValue(this.data.empcode.apellido_usuario);
-        this.usuarioForm.controls['edad'].setValue(this.data.empcode.edad_usuario);
-        this.usuarioForm.controls['sexo'].setValue(this.data.empcode.sexo_usuario);
-        this.usuarioForm.controls['telefono'].setValue(this.data.empcode.telefono_usuario);
-        this.usuarioForm.controls['estado'].setValue(this.data.empcode.estado_civil);
+        this.usuarioForm.controls['id_usuario'].setValue(this.data.empcode.id_usuario);
+        this.usuarioForm.controls['nombre_usuario'].setValue(this.data.empcode.nombre_usuario);
+        this.usuarioForm.controls['apellido_usuario'].setValue(this.data.empcode.apellido_usuario);
+        this.usuarioForm.controls['edad_usuario'].setValue(this.data.empcode.edad_usuario);
+        this.usuarioForm.controls['sexo_usuario'].setValue(this.data.empcode.sexo_usuario);
+        this.usuarioForm.controls['telefono_usuario'].setValue(this.data.empcode.telefono_usuario);
+        this.usuarioForm.controls['estado_civil'].setValue(this.data.empcode.estado_civil);
     }  
   }
 

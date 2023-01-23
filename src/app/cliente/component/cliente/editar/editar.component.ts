@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ServiceUsuarioService } from 'src/app/service/service-usuario.service';
 import { ServiceService } from 'src/app/service/service.service';
 import Swal from 'sweetalert2';
 
@@ -54,15 +53,7 @@ export class EditarComponent implements OnInit {
        })
      }
     })
-   }
-
-  // edit(){
-  //   let obj = this.clienteForm.value;
-  //   obj.id = this.id
-  //   this.producS.update(obj).subscribe((res: any) => {
-  //     console.log(res);
-  //   })
-  // } 
+   } 
    
   clear(){
     this.clienteForm.reset();

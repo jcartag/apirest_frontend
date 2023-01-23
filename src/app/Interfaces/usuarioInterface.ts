@@ -1,5 +1,4 @@
-export class usuarioEntity{   
-     
+export class usuarioEntity{        
     id_usuario?: number;
     nombre_usuario?: string;
     apellido_usuario?: string;

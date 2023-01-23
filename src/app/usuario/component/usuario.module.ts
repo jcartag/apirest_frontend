@@ -8,7 +8,7 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
-  declarations: [
+  declarations:[
     CrearComponent,
     EditarComponent,
     UsuarioComponent

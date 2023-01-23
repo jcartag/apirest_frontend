@@ -29,12 +29,12 @@ export class CrearComponent implements OnInit {
 
   SaveUsers(usuario?: usuarioEntity){
     this.usuarioForm = this.formBuilder.group({    
-      nombre: [usuario?.nombre_usuario || '', Validators.required],
-      apellido: [usuario?.apellido_usuario || '', Validators.required],
-      edad: [usuario?.edad_usuario || '', Validators.required],
-      sexo: [usuario?.sexo_usuario || '', Validators.required],
-      telefono: [usuario?.telefono_usuario || '', Validators.required],
-      estado: [usuario?.estado_civil || '', Validators.required],
+      nombre_usuario: [usuario?.nombre_usuario || '', Validators.required],
+      apellido_usuario: [usuario?.apellido_usuario || '', Validators.required],
+      edad_usuario: [usuario?.edad_usuario || '', Validators.required],
+      sexo_usuario: [usuario?.sexo_usuario || '', Validators.required],
+      telefono_usuario: [usuario?.telefono_usuario || '', Validators.required],
+      estado_civil: [usuario?.estado_civil || '', Validators.required],
       });    
   }
 
@@ -48,7 +48,7 @@ export class CrearComponent implements OnInit {
           timer: 1500
         })     
         this.dialogref.close('save');    
-        //this.clear();         
+        this.clear();         
       }
       if (res == 0) {
         Utils.mostrarAlerta('Error al ejecutar la petición', 'error');

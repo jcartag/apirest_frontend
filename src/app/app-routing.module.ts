@@ -20,24 +20,12 @@ const routes: Routes = [
         path: 'cliente',
         component: ClienteComponent,
         loadChildren: () => ClienteModule
-      },
-      {
-        path: 'anexar',
-        component: AgregarComponent
-      },
-      // {
-      //   path: 'editar',
-      //   component: EditarComponent
-      // },
+      },      
       {
         path: 'usuario',
         component: UsuarioComponent,
         loadChildren: () => UsuarioModule
-      },
-      // {
-      //   path: 'editarUsuario',
-      //   component: EditarComponent
-      // },
+      }    
     ]
   },
   {
